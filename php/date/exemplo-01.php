@@ -1,0 +1,41 @@
+<?php
+///////////date() e time()//////////////////
+date_default_timezone_set('America/Sao_Paulo');
+
+
+/* Função date(): Retorna uma string, de acordo com  o formato.
+date(string $format, int $timestamp = ?): string
+
+Segundo argumento padrão é o timestamp (não obrigatório)- tempo em segundos desde 01/Jan/1970 até agora. Ele vem por padrão e pode ser obtido pela função time()
+
+*/
+
+echo date("d-m-Y");
+echo "<br>";
+
+echo date("d/m/Y");	//-(Y) Mostra a data: dia/mês/ano (4 dígitos).
+echo "<br>";
+
+echo date("D/m/Y");	//-(D) Mostra a data: Dia da Semana (inglês)/mês/ano (4 dígitos).
+echo "<br>";
+
+echo date("d/m/y");	// (y) Mostra a data: dia/mês/ano (2 dígitos).
+echo "<br>";
+
+echo date("H:i:s");	//-(H:i:s) Mostra a hora : hora/minuto/segundo.
+//					   (Hour:mInute:Second)
+echo "<br>";
+
+echo date("d/m/y H:i:s");	// Combinação de data e hora.
+echo "<br>";
+
+// OBS.: A função date() não é sensível ao setlocale(), usada para configurar regional - idioma e fuso horário;
+
+echo time(); // Esse é o valor do timestamp atual.
+echo "<br>";
+
+echo date("d/m/y H:i:s",1636720782);	// Colocando o segundo parâmetro ele exibe a data e horário de acordo com o timestamp.
+echo "<br>";
+
+
+?>
