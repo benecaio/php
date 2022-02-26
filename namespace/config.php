@@ -1,17 +1,18 @@
 <?php
 
 // autoload para ser usado no namespace:
-spl_autoload_register(function($nameclass){
+spl_autoload_register(function($nameClass){
 	// Quando for executado o autoload, vamos receber no nome da classe: NAMESPACE/NomeDaClasse;
 
-	var_dump($nameclass);
+	var_dump($nameClass);
 	// Para ver o include do Namespace.
 	echo "<br>";
 
-	$dirClass = "class";
+	$dirClass = "classe";
 	// class é o nome da pasta que vou colocar as minhas classes desse projeto.
 
-	$filename = $dirClass . DIRECTORY_SEPARATOR . $nameclass . ".php";
+	$filename = str_replace ("\\", "/", $dirClass . DIRECTORY_SEPARATOR . $nameClass . ".php");
+
 	//filename se refere a TODO NOME DO ARQUIVO, inclusive as suas pastas (path): WINDOWS - Onde está/ Nome dele/ Extensão;
 
 	if (file_exists($filename)){
@@ -20,19 +21,20 @@ spl_autoload_register(function($nameclass){
 	};	
 });
 
-spl_autoload_register(function($nameclass){
+spl_autoload_register(function($nameClass){
 	// Quando for executado o autoload, vamos receber no nome da classe: NAMESPACE/NomeDaClasse;
 
-	var_dump($nameclass);
+	var_dump($nameClass);
 	// Para ver o include do Namespace.
 	echo "<br>";
 
-	$dirClass = "class";
+	$dirClass = "classe";
 	// class é o nome da pasta que vou colocar as minhas classes desse projeto.
 
 	$dirCliente = "Cliente";
 
-	$filename = $dirClass . DIRECTORY_SEPARATOR . $dirCliente . DIRECTORY_SEPARATOR .$nameclass . ".php";
+	$filename =	str_replace ("\\", "/", $dirClass . DIRECTORY_SEPARATOR .$dirCliente. DIRECTORY_SEPARATOR . $nameClass . ".php");
+
 	//filename se refere a TODO NOME DO ARQUIVO, inclusive as suas pastas (path): WINDOWS - Onde está/ Nome dele/ Extensão;
 
 	if (file_exists($filename)){

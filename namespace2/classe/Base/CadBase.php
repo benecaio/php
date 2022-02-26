@@ -1,6 +1,5 @@
 <?php
-
-class Cadastro {
+class CadBase {
 	// O nome da classe é o mesmo nome do arquivo, assim que é organizado!
 
 	private $nome;

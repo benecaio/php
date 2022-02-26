@@ -38,26 +38,4 @@ echo "<br>";
 echo $doc->getNumero();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-funtion incluirClasses($nomeClasse){
+function incluirClasses($nomeClasse){
 
 	if (file_exists("$nomeClasse" . ".php") == true) {
 		// file_exists verifica se o arquivo existe NESSE DIRETÓRIO.
