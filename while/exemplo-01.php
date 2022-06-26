@@ -6,7 +6,7 @@ $condição = true;
 
 	while ($condição) {
 		$numero = rand(0,10);
-		// função para número aleatório de qual a qual.
+		// função para números aleatórios. Seleciona um número de (x a y).
 
 		if($numero === 3){
 
@@ -14,7 +14,6 @@ $condição = true;
 			echo "===========> ";
 			$condição = false;
 		}
-
 	echo $numero . "<br>";
 }
 echo "<hr>";

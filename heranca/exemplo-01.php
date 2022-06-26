@@ -1,41 +1,50 @@
 <?php
+class Documento
+{
+    private $numero;
 
-class Documento {
+    public function getNumero()
+    {
+        return $this->numero;
+    }
 
-	private $numero;
-
-	public function getNumero(){
-
-		return $this->numero;
-	}
-
-	public function setNumero($n){
-
-		$this->numero = $n;
-	}
+    public function setNumero($n)
+    {
+        $this->numero = $n;
+    }
 }
 
-class CPF extends Documento{
+/**
+ * @author Caio Benevides <caiovenevides@hotmail.com>
+ * @date
+ */
+class CPF extends Documento
+{
 
-	public function validar():bool {
+    /**
+     * @description Função p/ validar o CPF
+     * @return bool
+     * @uses $cpf = new CPF()->validar();
+     */
+    public function validar(): bool
+    {
+        $numeroCPF = $this->getNumero();
+        return true;
+    }
 
-		$numeroCPF = $this->getNumero();
-
-		// validação do cpf
-
-		return true;
-	}
+    /**
+     * @override
+     * @return mixed
+     */
+    public function getNumero()
+    {
+        $this->numero = $this->numero + 10;
+        parent::getNumero();
+    }
 }
-
-
 $doc = new CPF();
-
 $doc->setNumero("12382828998");
-
 var_dump ($doc->validar());
 echo "<br>";
-
 echo $doc->getNumero();
-
-
 ?>

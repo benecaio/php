@@ -10,7 +10,7 @@ $qualIdade = 26;
 /* a palavra reservada if (se) deve ser executada se a condição, dentro dos parentesis ocorrer, o programa deve executar os comandos em sequência descritos das chaves.	*/
 
 
-if ($qualIdade < $idadeCrianca) {
+if ($qualIdade < $idadeCrianca){
 echo "Você é uma criança.";
 }
 /* a palavra reservada else if () remete a mais de uma condição. */

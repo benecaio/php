@@ -1,7 +1,7 @@
 <?php
 ////////////////////// Array 2D//////////////////////////
 
-$pessoas = array();
+$pessoas = array(); // array vazio criado.
 
 // Funções de Array:
 // o array_push adiciona informações no array já criado!

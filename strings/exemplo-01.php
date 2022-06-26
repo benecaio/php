@@ -1,6 +1,8 @@
 <?php
 
 ////// Diferença entre áspas duplas e áspas simples em strings. ///////////////////////////////
+// No echo áspas duplas interpreta com base nas variáveis. Áspas simples exibe tudo em texto sem interpretar.
+
 
 $name = "Caio";	//Áspas duplas no valor atribuído à variável.
 

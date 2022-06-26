@@ -7,9 +7,12 @@ $b = 36;
 
 
 
-var_dump($a <=> $b);/* Operador Spaceship (<=>). Verifica: - Se a primeira variável é MENOR que a segunda ===> 															   int(-1);
-														   - Se a primeira variável é IGUAL a segunda =======> int(0); Igualdade de valor;
-														   - Se a primeira variável é MAIOR que a segunda ===> int(1).                  */
+var_dump($a <=> $b);
+/* Operador Spaceship (<=>). Verifica: 
+	- Se a primeira variável é MENOR que a segunda ===> int(-1);														   
+	- Se a primeira variável é IGUAL a segunda =======> int(0); Igualdade de valor;											  
+	- Se a primeira variável é MAIOR que a segunda ===> int(1).                  
+*/
 echo "<br>";
 
 ?>

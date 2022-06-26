@@ -17,7 +17,8 @@ echo $nome." no teste 1.";	//Concatenação de variável + texto.
 
 function teste2() {
 
-$nome = "Fernando Rezende";	//Note que eu posso usar o mesmo nome da variável que não haverá conflito devido o escopo.
+$nome = "Fernando Rezende";	/*Note que eu posso usar o mesmo nome da variável que não haverá conflito
+ devido o escopo. */
 echo $nome." no teste 2.";
 
 

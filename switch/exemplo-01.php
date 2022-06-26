@@ -5,8 +5,6 @@
 $diaDaSemana = date("w");
 // Função date é nativa do php.
 
-//$diaDaSemana = 7;
-
 echo $diaDaSemana;
 echo "<br>";
 

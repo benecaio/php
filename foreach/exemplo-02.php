@@ -12,7 +12,11 @@
 <form>
 
 
-	
+	<?php
+	echo "Insira seu nome e data de nascimento nos campos abaixo. Depois click em OK :";
+	echo "<br>";
+	?>
+
 	<input type ="text" name = "Nome">	
 	<input type ="date" name = "Nascimento">
 	<input type ="submit" value = "OK">	
