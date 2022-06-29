@@ -1,7 +1,7 @@
 <?php
 ///////////date() e time() 2//////////////////
 
-$ts = strtotime("2001-09-11"); //  String to time (timestamp). 
+$ts = strtotime("2022-06-29"); //  Insira a String to timestamp. 
 echo($ts);
 echo "<br>";
 

@@ -16,7 +16,7 @@ LC_ALL para tudo abaixo.
 locale = O padrão de linguagem a ser usada, então Linux, UTF-8, Microsoft também é diferente.
 */ 
 
-echo ucwords(strftime("dia da semana: %A/ ano vigente: %B"));
+echo ucwords(strftime("dia da semana: %A <br> ano vigente: %B"));
 
 /*strftime(string $format, int $timestamp = ?): string
 
