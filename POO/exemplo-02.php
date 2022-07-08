@@ -5,24 +5,25 @@
 class Carro{
 
 	private $modelo;
-	private $motor;
-	private $ano;
+    private $motor;
+    private $ano;
 
 	// Para cada atributo, vamos colocar 2 métodos: Get(pegar) e Set(definir);
 
-	public function getModelo(){
-		return $this->modelo;
-	}
+	public function getModelo()
+    {
+        return $this->modelo;
+    }
 
 	public function setModelo($modelo){
 		// Note que $modelo é um parâmetro, poderia ser outro nome.
-	
+
 		$this->modelo = $modelo;
-		// Estou dando o comando de pegar o parâmetro ($modelo) e colocar no atributo. 
+		// Estou dando o comando de pegar o parâmetro ($modelo) e colocar no atributo.
 
 	}
 
-	public function getMotor():float{	//: float é uma conversão direta no método para float.
+	public function getMotor():float {	//: float é uma conversão direta no método para float.
 		return $this->motor;
 	}
 
@@ -43,7 +44,7 @@ class Carro{
 
 // Algumas IDE's geram os Getters e Setters, pois é padrão.
 
-	public function exibir(){	// método
+	public function exibir() {	// método
 		return array(
 			"modelo" => $this->getModelo(),
 			"motor" => $this->getMotor(),
@@ -61,16 +62,19 @@ $gol->setModelo("Gol Gti");
 $gol->setMotor("1.6");
 $gol->setAno("2017");
 
+echo("Exibindo o objeto que foi instanciado: <br> ");
 print_r($gol);
-echo "<br>";
-var_dump($gol);
-echo "<br>";
-echo "<br>";
+echo "<br><br>";
 
-
+echo(" O método exibir é um array dos metodos getters: <br>");
 print_r($gol->exibir());
-echo "<br>";
+echo "<br><br>";
 
+echo("Inspencionando a variável gol: <br>");
+var_dump($gol);
+echo "<br><br>";
+
+echo("Inspecionando o método exibir(): <br>");
 var_dump($gol->exibir());
 
 ?>

@@ -15,16 +15,13 @@ class Endereco {
 	public function __construct($a,$b, $c){
 		// método que é chamado no momento que o objeto é instanciado.
 		$this->logradouro = $a;
-
 		$this->numero = $b;
-
 		$this->cidade = $c;
-
 	}
 
 	public function __destruct(){
 		// método que é o último a ser chamado antes de liberar a memória.
-		var_dump("O arquivo foi destruído!");
+		echo("O arquivo foi destruído!");
 	}
 
 	public function __toString(){
@@ -37,13 +34,14 @@ class Endereco {
 
 $endereco = new Endereco("2ª avenida Norte", "416", "Samambaia");
 
+echo("Inspecionando a classe Endereço: <br>");
 var_dump($endereco);
-echo "<br>";
-echo "<br>";
+echo "<br><br>";
 
-echo ($endereco); // o echo foi dado por causa do objeto ter um metodo magico para transformar em string, forçando o echo ele entendeu que era pra  emitir a parte em string.
-echo "<br>";
-echo "<br>";
+echo("Exibindo a classe Endereço: <br>");
+echo ($endereco); 
+// O echo foi dado por causa do objeto ter um metodo magico para transformar em string, forçando o echo ele entendeu que era pra  emitir a parte em string.
+echo "<br><br>";
 
 unset($endereco);
 
