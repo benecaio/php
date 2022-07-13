@@ -16,11 +16,7 @@ class Pessoa {
 
 
 
-class Programador extends Pessoa{
-	echo "os dados a seguir são da classe: " . get_class($this). "<br>";
-}
-
-
+class Programador extends Pessoa {};
 
 $objeto = new Programador();
 // Note que o objeto recebe a classe Programador que é extendida (filha) de Pessoa.
@@ -47,7 +43,7 @@ class ProgramadorPleno extends Pessoa{
 }
 
 $objeto2 = new ProgramadorPleno();
-// Note que o objeto recebe a classe ProgramadorPlenos que é extendida (filha) de Pessoa.
+// Note que o objeto recebe a classe ProgramadorPleno que é extendida (filha) de Pessoa.
 
 echo $objeto2->verDados(); 
 // Nesse caso, estamos acessando verDados() que está dentro de PROGRAMADOR 2!
