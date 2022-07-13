@@ -1,7 +1,8 @@
 <?php
+
 class Documento
 {
-    private $numero;
+    protected $numero;
 
     public function getNumero()
     {
