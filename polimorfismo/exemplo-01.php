@@ -1,5 +1,7 @@
 <?php
 
+/* Polimorfismo é a capacidade que uma classe tem de sobrepor métodos da classe abstrata, modificando-os. Para *tanto, é necessário que ela possua a mesma assinatura do método.
+*/
 abstract class Animal {
 
 	public function falar(){

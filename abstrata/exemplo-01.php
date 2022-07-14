@@ -1,5 +1,7 @@
 <?php
 
+/* Classes abstratas contêm um conjunto de características e funcionalidades comuns, para serem usados em *diversos outras classes.
+*/
 
 interface Veiculo {
 
