@@ -1,13 +1,16 @@
 <?php
-//Classe Mysqli para operar no banco de dados do PHP.
+/*Classe Mysqli para operar no banco de dados do PHP.
+https://www.php.net/manual/pt_BR/class.mysqli-stmt.php
+https://www.php.net/manual/pt_BR/mysqli.quickstart.connections.php
+*/
 
-$conn = new mysqli("localhost", "root", "Caio2310$", "dbphp8");
+$conn = @mysqli_connect("127.0.0.1", "root", "", "dbphp8");
 /*				   ("servidor", "usuário", "senha", "banco de dados");
 	Um objeto para representar a conexão entre o PHP e um banco de dados Mysql 
 */
 
-if ($conn->connect_error) {
-	echo "Error: " . $conn->connect_error;
+if (!$conn) {
+	printf("O servidor não teve conexão. Error: %s\n", mysqli_connect_errno());
 }
 
 $stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES(?,?)");
@@ -19,12 +22,12 @@ $stmt->bind_param("ss", $login, $pass);
 // Esse método espera dados referenciados.
 
 $login = "user";
-$senha = "12345";
+$pass = "12345";
 
 $stmt->execute();
 //envia para o banco de dados depois de todos os parâmetros preparados.
 
-printf("Linha inserida: ", $stmt->affected_rows);
+printf("A linha no banco de dados foi inserida!");
 echo"<br>";
 
 

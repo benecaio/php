@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO("mysql:dbname=dbphp8; host=localhost", "root", "Caio2310$");
+$conn = new PDO("mysql:dbname=dbphp8; host=localhost", "root", "");
 
 
 
@@ -15,8 +15,8 @@ $stmt->bind_param(":PASSWORD", $password);
 */
 
 
-$sql  = 'INSERT INTO tb_usuarios (deslogin, dessenha) ';
-$sql .= 'VALUES (:login, :senha)';
+$stmt  = 'INSERT INTO tb_usuarios (deslogin, dessenha) ';
+$stmt .= 'VALUES (:login, :senha)';
 
 $login = "CAIO 2";
 $password = "escadaazul";
@@ -39,7 +39,7 @@ function verificarUsuario($conect, $nome_usuario):bool {
 if(verificarUsuario($conn, $login)){
 	echo "<div class='alert alert-success'>
 		<button type='button' class='close' data-dismiss='alert'>&times;</button>
-		<strong>Já existe esse usuario, mude o nomme!</strong>
+		<strong>Já existe esse usuário, por favor use outro!</strong>
 		</div>";
 } else {
 	try {
