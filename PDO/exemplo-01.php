@@ -1,6 +1,7 @@
 <?php
 
-/*PDO (PHP DATA OBJECT): Usaremos o PDO e a aplicação PHP. A forma do PDO conversar com o php é bem transparente, pois podemos mudar o banco sem alterar a aplicação. Mostrando os itens do banco de dados:
+/*PDO (PHP DATA OBJECT): Usaremos o PDO e a aplicação PHP. A forma do PDO conversar com o php é bem transparente, pois podemos mudar o banco sem alterar a aplicação.
+Mostrando os itens do banco de dados:
 */
 $conn = new PDO("mysql:dbname=dbphp8; host=localhost", "root", "");
 

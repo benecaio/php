@@ -8,8 +8,7 @@ $conn = new PDO("mysql:dbname=dbphp8; host=localhost", "root", "");
 //db2_bind_param($stmt, parameter-number, variable-name)(":LOGIN", $login);
 
 /*
-$stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha)
- VALUES (:LOGIN, :PASSWORD)");
+$stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES (:LOGIN, :PASSWORD)");
 $stmt->bind_param(":LOGIN", $login);
 $stmt->bind_param(":PASSWORD", $password);
 */

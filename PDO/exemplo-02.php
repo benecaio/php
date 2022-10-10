@@ -3,7 +3,7 @@
 
 $conn = new PDO("mysql:dbname=dbphp8; host=localhost", "root", "");
 
-$stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES('Caio', '2310');");
+$stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES('Cai0o', '23110');");
 $stmt->execute();
 
 $stmt = $conn->prepare("SELECT * FROM tb_usuarios ORDER BY deslogin");
