@@ -1,7 +1,8 @@
 <?php
 
 ////////////// FOREACH ////////////////
-// Usado em arrays e coleções.
+/* Usado em arrays e coleções. Ele é usado para facilitar a iteração de estruturas como arrays, objetos e outros tipos que são iteráveis. Como resultado ele percorrerá todos os itens da coleção, disponibilizando a chave e o valor de cada elemento.
+*/
 
 /* foreach (iterable_expression as $value)
 	statement
@@ -16,7 +17,7 @@ $meses = array( "Janeiro", "Fevereiro", "Março",
 				"Outubro", "Novembro", "Dezembro");
 
 foreach ($meses as $mes) {
-	echo " Mês: ". $mes ." ";
+	echo " Mês: ". $mes ." // ";
 //Caso mais simples, pra apenas percorrer o array e atribuir o valor pra cada um.
 
 
