@@ -10,7 +10,7 @@ class Documento {
 
 	private $numero;
 
-	public function getNumero(){
+	public function getNumero():string{
 		return $this->numero;
 	}
 
@@ -23,9 +23,11 @@ class Documento {
 $cpf = new Documento();
 
 $cpf->setNumero("56482191134");
+echo "Inspecionando a variável cpf: <br>";
 var_dump($cpf);
-echo "<br>";
+echo "<br><br>";
 
+echo("Inspecionando o método getNumero(): <br>");
 var_dump($cpf->getNumero());
 echo "<br>";
 

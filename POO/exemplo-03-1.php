@@ -49,7 +49,7 @@ class Documento {
 	        return false;
 	    }
    
-    	/* Verifica se nenhuma das sequiencias inválidas abaixo foi selecionada: Caso afirmativo retorne falso: 
+    	/* Verifica se nenhuma das sequências inválidas abaixo foi selecionada: Caso afirmativo retorne falso: 
     	*/
 	    else if ($cpf == '00000000000' || 
 	        $cpf == '11111111111' || 
@@ -67,42 +67,38 @@ class Documento {
 
      	//Calcula os dígitos verificadores para verificar se o CPF é válido:
      	else {   
-    	     
         	for ($t = 9; $t < 11; $t++) {
-             
 	            for ($d = 0, $c = 0; $c < $t; $c++) {
-	                $d += $cpf{$c} * (($t + 1) - $c);
+	                $d += $cpf[$c] * (($t + 1) - $c);
 	            }
-	            
 	            $d = ((10 * $d) % 11) % 10;
 
-	            if ($cpf{$c} != $d) {
+	            if ($cpf[$c] != $d) {
 	                echo("False 4");
 	                return false;
 	            }
         	}
- 
  			// Retorna true, se o número for um  CPF.
        		 return true;
     	}
 	}
 }
 
-// Vamos chamar o método estático sem instanciar a classe:
-var_dump(Documento::validarCpf("05124518189"));
+echo "Vamos chamar o método estático sem instanciar a classe: <br>";
+var_dump(Documento::validarCpf("56482191134"));
 echo "<br>";
-echo "<br>";
+echo "<br><br>";
 
 
-// Vamos instanciar a classe para exibir o CPF ou o Erro (Excessão).
+echo "Vamos instanciar a classe para exibir o CPF ou o Erro (Excessão). <br>";
 $cpf = new Documento();
 
-$cpf->setNumero("0000000000012");
+$cpf->setNumero("56482191134");
 var_dump($cpf->getNumero());
 echo "<br>";
-echo "<br>";
+echo "<br><br>";
 
-
+echo("Inspecionando o método getNumero(): <br>");
 var_dump($cpf);
 echo "<br>";
 
